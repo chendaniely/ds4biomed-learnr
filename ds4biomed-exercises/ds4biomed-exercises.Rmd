@@ -1,6 +1,8 @@
 ---
-title: "Tutorial"
-output: learnr::tutorial
+output: 
+  html_document:
+    includes:
+      in_header: iframe_resize.html
 runtime: shiny_prerendered
 ---
 
@@ -11,7 +13,6 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r load_excel-setup}
-
 suppressMessages(
   .tumorgrowth <- readr::read_csv("https://raw.githubusercontent.com/chendaniely/ds4biomed/master/data/tumorgrowth_long.csv")
 )
@@ -26,3 +27,5 @@ tumorgrowth <- ____(____)
 ```{r load_excel-solution}
 tumorgrowth <- read_csv('tumorgrowth_long.csv')
 ```
+
+<div data-iframe-height></div>
