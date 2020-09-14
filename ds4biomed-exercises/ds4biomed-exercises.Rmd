@@ -1,0 +1,28 @@
+---
+title: "Tutorial"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r load_excel-setup}
+suppressPackageStartupMessages(library(tidyverse))
+
+suppressMessages(
+  .tumorgrowth <- readr::read_csv("https://raw.githubusercontent.com/chendaniely/ds4biomed/master/data/tumorgrowth_long.csv")
+)
+
+readr::write_csv(.tumorgrowth, 'tumorgrowth_long.csv')
+```
+
+```{r load_excel, exercise=TRUE}
+tumorgrowth <- ____(____)
+```
+
+```{r load_excel-solution}
+tumorgrowth <- read_csv('tumorgrowth_long.csv')
+```
