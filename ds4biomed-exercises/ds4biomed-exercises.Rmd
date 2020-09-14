@@ -6,11 +6,11 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 library(learnr)
+library(tidyverse)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r load_excel-setup}
-suppressPackageStartupMessages(library(tidyverse))
 
 suppressMessages(
   .tumorgrowth <- readr::read_csv("https://raw.githubusercontent.com/chendaniely/ds4biomed/master/data/tumorgrowth_long.csv")
